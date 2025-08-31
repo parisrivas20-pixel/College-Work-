@@ -1,0 +1,279 @@
+Basic Programs
+
+
+Ques 1.)  Write a program to check even and odd.
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("ENTER A NUMBER\n");
+    scanf("%d", &n);
+    if(n%2==0)
+    printf("%d is an even number\n",n);
+    else if(n==1)
+    printf("%d is neither an even number nor an odd number\n",n);
+    else
+    printf("%d is an odd number\n",n);
+    return 0;
+}
+
+
+
+Ques 2.) Write a program to check greatest of two numbers.
+#include <stdio.h>
+int main()
+{
+    int a;
+    int b;
+    printf("ENTER A NUMBER\n");
+    scanf("%d", &a);
+    printf("ENTER ANOTHER NUMBER\n");
+    scanf("%d", &b);
+    if(a>b)
+    printf("%d is greater than %d\n",a,b);
+    else if(b>a)
+    printf("%d is greater than %d\n",b,a);
+    else
+    printf("BOTH NUMBERS ARE EQUAL\n");
+    return 0;
+}
+
+
+
+Ques 3.) Write a program to check greatest of three numbers.
+#include <stdio.h>
+int main()
+ {
+    int a, b, c;
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a >= b && a>= c)
+    {
+        printf("The greatest number is: %d\n", a);
+    } 
+else if (b >= a && b >= c) 
+{
+        printf("The greatest number is: %d\n", b);
+    } 
+else 
+{
+        printf("The greatest number is: %d\n", c);
+    }
+
+    return 0;
+}
+
+
+
+Ques 4.) Write a program to check whether it’s a leap year.
+#include <stdio.h>
+int main()
+ {
+    int yr;
+    printf("Enter a year: ");
+    scanf("%d", &yr);
+    if ((yr % 4 == 0 && yr % 100 != 0) || (yr % 400 == 0))
+    {
+        printf("%d is a leap year.\n", yr);
+    }
+    else
+    {
+        printf("%d is not a leap year.\n", yr);
+    }
+    return 0;
+}
+
+
+
+Ques 5.) Write a program to check if a number is positive negative or zero.
+#include <stdio.h>
+int main()
+ {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n>0)
+    {
+        printf("%d IS A POSITIVE NUMBER\n", n);
+    }
+    else if(n<0)
+    {
+        printf("%d IS A NEGATIVE NUMBER\n", n);
+    }
+    else
+    {
+        printf("%d IS ZER0\n", n);
+    }
+    return 0;
+}
+
+
+
+Ques 6.) Write a program to check whether the alphabet is vowel or consonant.
+#include <stdio.h>
+int main()
+ {
+    char ch;
+    printf("Enter an alphabet: ");
+    scanf(" %c", &ch);
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    {
+        if (ch >= 'A' && ch <= 'Z')
+ {
+            ch = ch + ('a' - 'A');
+        }
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+        {
+            printf("'%c' is a vowel.\n", ch);
+        }
+        else
+        {
+            printf("'%c' is a consonant.\n", ch);
+        }
+    }
+    else
+    {
+        printf("Invalid input. Please enter an alphabet character.\n");
+    }
+    return 0;
+}
+
+
+
+Ques 7.) Write a program of simple calculator.
+#include <stdio.h>
+int main()
+ {
+    char operator;
+    double num1, num2, result;
+    printf("Simple Calculator\n");
+    printf("Choose an operation (+, -, *, /): ");
+    scanf(" %c", &operator);
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+    switch (operator) 
+{
+        case '+':
+            result = num1 + num2;
+            printf("Result: %.2lf\n", result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("Result: %.2lf\n", result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("Result: %.2lf\n", result);
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("Result: %.2lf\n", result);
+            } 
+else
+ {
+                printf("Error: Division by zero is not allowed.\n");
+            }
+            break;
+        default:
+            printf("Invalid operator.\n");
+    }
+    return 0;
+}
+
+
+
+Ques8.) Write a program to check number divisibility.
+#include <stdio.h>
+int main()
+ {
+    int dividend, divisor;
+    printf("Enter the dividend: ");
+    scanf("%d", &dividend);
+    printf("Enter the divisor: ");
+    scanf("%d", &divisor);
+    if (divisor == 0)
+ {
+        printf("Error: Division by zero is not allowed.\n");
+    } 
+else
+ {
+        if (dividend % divisor == 0)
+ {
+            printf("%d is divisible by %d.\n", dividend, divisor);
+        }
+ else
+ {
+            printf("%d is not divisible by %d.\n", dividend, divisor);
+        }
+    }
+    return 0;
+}
+
+
+
+Ques 9.) Write a program of Grade calculation.
+#include <stdio.h>
+int main()
+ {
+    int marks;
+    printf("Enter your marks (0–100): ");
+    scanf("%d", &marks);
+    if (marks < 0 || marks > 100) {
+        printf("Invalid marks. Please enter a value between 0 and 100.\n");
+    } 
+else {
+        if (marks >= 90) 
+{
+            printf("Grade: A\n");
+        } 
+else if (marks >= 80)
+ {
+            printf("Grade: B\n");
+        } 
+else if (marks >= 70)
+ {
+            printf("Grade: C\n");
+        } 
+else if (marks >= 60) 
+{
+            printf("Grade: D\n");
+        } 
+else if (marks >= 50)
+ {
+            printf("Grade: E\n");
+        }
+ else
+ {
+            printf("Grade: F (Fail)\n");
+        }
+    }
+    return 0;
+}
+
+
+
+Ques 10.) Write a program to check Uppercase or Lowercase Alphabet.
+#include <stdio.h>
+int main()
+ {
+    char ch;
+    printf("Enter a single alphabet character: ");
+    scanf(" %c", &ch);
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    {
+        if (ch >= 'A' && ch <= 'Z')
+ {
+            printf("'%c' is an uppercase letter.\n", ch);
+        } 
+else
+ {
+            printf("'%c' is a lowercase letter.\n", ch);
+        }
+    }
+    else
+    {
+        printf("'%c' is not an alphabet character.\n", ch);
+    }
+    return 0;
+}
