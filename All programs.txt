@@ -235,6 +235,27 @@ int main(void)
  }
 
 16.)Write a program to demonstrate the difference between pre-increment and post-increment
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 5;
+
+    printf("Initial values:\n");
+    printf("a = %d, b = %d\n", a, b);
+
+    // Pre-increment
+    printf("\nUsing pre-increment (++a):\n");
+    printf("Value returned: %d\n", ++a); 
+    printf("Final value of a: %d\n", a);
+
+    // Post-increment
+    printf("\nUsing post-increment (b++):\n");
+    printf("Value returned: %d\n", b++); 
+    printf("Final value of b: %d\n", b);
+
+    return 0;
+}
+
 17.)Write a program to calculate the simple interest (SI = P × R × T / 100). 
 
  #include <stdio.h>
@@ -364,4 +385,5 @@ int main()
  printf("%f is average of marks of 3 subjects", avg);
  return 0;
  }
+
 
